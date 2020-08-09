@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Twitterment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lg7-ht-7DL" userLabel="Background View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="rcg-MS-Gox">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Q2-Z9-5H6" userLabel="Sentiment label">
+                                                <rect key="frame" x="125.66666666666669" y="0.0" width="163" height="658"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How do people feel about..." textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aVo-1H-dSZ" userLabel="Textfield">
+                                                <rect key="frame" x="0.0" y="710" width="414" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="7hF-tH-oxC"/>
+                                                </constraints>
+                                                <color key="textColor" name="Label color"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="handleInputField:" destination="BYZ-38-t0r" eventType="valueChanged" id="nfj-sc-0n6"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7E2-Kd-7Dz">
+                                                <rect key="frame" x="157.66666666666666" y="812" width="98.999999999999972" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="uLd-Xh-oKY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="Predict!">
+                                                    <color key="titleColor" name="Label color"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="predictPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ITZ-Co-UmB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aVo-1H-dSZ" secondAttribute="trailing" id="6iV-H5-7ee"/>
+                                            <constraint firstItem="aVo-1H-dSZ" firstAttribute="leading" secondItem="rcg-MS-Gox" secondAttribute="leading" id="WPR-GI-PdL"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rcg-MS-Gox" firstAttribute="top" secondItem="Lg7-ht-7DL" secondAttribute="top" id="5TT-r3-jKl"/>
+                                    <constraint firstAttribute="trailing" secondItem="rcg-MS-Gox" secondAttribute="trailing" id="Bvz-fw-Uxb"/>
+                                    <constraint firstItem="rcg-MS-Gox" firstAttribute="leading" secondItem="Lg7-ht-7DL" secondAttribute="leading" id="Nub-AW-Z31"/>
+                                    <constraint firstAttribute="bottom" secondItem="rcg-MS-Gox" secondAttribute="bottom" id="ocj-AC-G7r"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lg7-ht-7DL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C7u-qG-TRN"/>
+                            <constraint firstItem="Lg7-ht-7DL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CUE-Cq-LtE"/>
+                            <constraint firstItem="Lg7-ht-7DL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pjq-PN-NTK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Lg7-ht-7DL" secondAttribute="bottom" id="U1h-Sx-txa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="handleTextField" destination="aVo-1H-dSZ" id="ck5-he-5Kc"/>
+                        <outlet property="sentimentLabel" destination="8Q2-Z9-5H6" id="e2q-Pc-bp2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Label color">
+            <color red="0.0" green="0.72156862745098038" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundColor">
+            <color red="0.29764515159999999" green="1" blue="0.85534912350000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
