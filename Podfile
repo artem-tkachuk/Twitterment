@@ -7,5 +7,6 @@ target 'Twitterment' do
 
   # Pods for Twitterment
   pod 'IQKeyboardManagerSwift'
+  pod 'SwiftyJSON'
 
 end
